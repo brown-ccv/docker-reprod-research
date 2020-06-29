@@ -1,3 +1,3 @@
 FROM debian
 
-CMD ["/bin/bash"]
+CMD bash

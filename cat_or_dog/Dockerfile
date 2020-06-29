@@ -1,7 +1,12 @@
-FROM pytorch/pytorch:latest
+#### org  / image   : tag
+FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-runtime
+
+MAINTAINER "Paul Stey" "paul_stey@brown.edu"
 
 RUN apt-get update 
-RUN apt-get install -y libgtk2.0-dev
+RUN apt-get install -y \
+    libgtk2.0-dev \
+    wget 
 
 
 RUN mkdir /opt/cat_or_dog
@@ -13,4 +18,4 @@ RUN pip install -r /opt/cat_or_dog/requirements.txt
 
 
 
-CMD ["/bin/bash"]
+CMD /bin/bash
