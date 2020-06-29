@@ -15,3 +15,8 @@ RUN pip install -r /opt/cat_or_dog/requirements.txt
 
 
 CMD /bin/bash
+
+## example use (assumes image name is `catdog:0.1.0`)
+# docker run --gpus=all -it --ipc=host \
+#            -v "$(pwd)/data":/opt/cat_or_dog/data \
+#            catdog:0.1.0
