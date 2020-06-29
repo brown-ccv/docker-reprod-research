@@ -2,4 +2,4 @@ FROM debian
 
 COPY fib /usr/bin
 
-CMD fib 5
+CMD fib 50
